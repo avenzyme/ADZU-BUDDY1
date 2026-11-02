@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Document metadata and linked CSS/JavaScript -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <meta name="theme-color" content="#091d3b"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <meta content="ADZU BUDDY — your guide to college life at Ateneo de Zamboanga University." name="description"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title>ADZU BUDDY | Your Guide to College Life</title>
+        <script defer="" src="script.js"></script>
+    </head>
+    <body>
+        <!-- Shared site header and navigation -->
+        <header class="site-header">
+            <!-- Brand block: official AdZU logo + existing site name/headline. -->
+            <a aria-label="ADZU Buddy home" class="brand" href="#home" data-page-link="home">
+                <img class="brand-logo" src="assets/adzu-logo.png" alt="Ateneo de Zamboanga University logo"/>
+                <span><strong>ADZU BUDDY</strong><small>Your guide to college life</small></span>
+            </a>
+            <div class="header-actions">
+                <button aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle">☰</button>
+            </div>
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="#home" data-page-link="home">Home</a>
+                <a href="#explore" data-page-link="explore">Campus</a>
+                <a href="#resources" data-page-link="resources">Resources</a>
+                <a href="#organizations" data-page-link="organizations">Organizations</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Student Guides <span aria-hidden="true"></span></button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <button type="button" data-guide="enrollment" role="menuitem">Enrollment guide</button>
+                        <button type="button" data-guide="clearance" role="menuitem">Clearance guide</button>
+                        <button type="button" data-guide="payment" role="menuitem">Tuition &amp; fees guide</button>
+                        <button type="button" data-guide="scholarship" role="menuitem">Scholarship guide</button>
+                        <a href="#guides" data-page-link="guides" role="menuitem">View all guides</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">More <span aria-hidden="true"></span></button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="#faq" data-page-link="faq" role="menuitem">FAQs</a>
+                        <a href="#contact" data-page-link="contact" role="menuitem">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Theme switch: intentionally placed as the right-most navigation control. -->
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                    <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                        </svg>
+                    </span>
+                    <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                            <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.115-.346.386-.617.732-.732z"/>
+                        </svg>
+                    </span>
+                </button>
+            </nav>
+        </header>
+        
+        <main>
+            <!-- Home page section -->
+            <section class="hero page-view" data-page="home" id="home">
+                <div class="hero-content">
+                    <div class="hero-title-block">
+                        <span class="eyebrow">WELCOME, BLUE EAGLE!</span>
+                        <h1>College life is easier<br/><em>with a buddy.</em>
+                        </h1>
+                    </div>
+                    <div class="hero-details">
+                        <p>Your handy guide to campus places, student procedures, study spots, and university resources at AdZU.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#explore" data-page-link="explore">Explore campus <span>→</span></a>
+                            <a class="btn btn-outline" href="#guides" data-page-link="guides">View student guides</a>
+                        </div>
+                        <div class="hero-note"><span class="note-dot"></span> One place for the things you need to know.
+                        </div>
+                    </div>
+                </div>
+                <div aria-label="Illustration of a university campus" class="hero-art">
+                    <div class="sun">
+                    </div>
+                    <div class="cloud cloud-one">
+                    </div>
+                    <div class="cloud cloud-two">
+                    </div>
+                    <div class="campus-building">
+                        <div class="roof">
+                        </div>
+                        <div class="building-top"><span></span><span></span><span></span>
+                        </div>
+                        <div class="building-body">
+                            <div class="building-door">
+                            </div>
+                            <div class="window-row"><i></i><i></i><i></i><i></i>
+                            </div>
+                            <div class="window-row"><i></i><i></i><i></i><i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree tree-left"><b></b><i></i>
+                    </div>
+                    <div class="tree tree-right"><b></b><i></i>
+                    </div>
+                    <div class="path">
+                    </div>
+                    <div class="floating-card"><span class="floating-icon">⌖</span><span><strong>Find your way</strong><small>Campus made simpler</small></span>
+                    </div>
+                </div>
+            </section>
+            <!-- Home page section -->
+            <section aria-label="Quick links" class="quick-section wrap page-view" data-page="home">
+                <div class="section-heading compact-heading">
+                    <div><span class="eyebrow">START HERE</span>
+                        <h2>What do you need today?
+                        </h2>
+                    </div>
+                    <p>
+                    </p>
+                </div>
+                <div class="quick-grid">
+                    <a class="quick-card" href="#explore" data-page-link="explore"><span class="quick-icon blue">⌖</span><strong>Campus locations</strong><small>Find buildings and offices</small><span class="card-arrow">↗</span></a>
+                    <a class="quick-card" href="#guides" data-page-link="guides"><span class="quick-icon gold">✓</span><strong>Student procedures</strong><small>Enrollment and clearance guides</small><span class="card-arrow">↗</span></a>
+                    <a class="quick-card" href="#faq" data-page-link="faq"><span class="quick-icon coral">?</span><strong>Frequently asked</strong><small>Answers to common questions</small><span class="card-arrow">↗</span></a>
+                    <a class="quick-card" href="#organizations" data-page-link="organizations"><span class="quick-icon green">✳</span><strong>Student organizations</strong><small>Discover ways to get involved</small><span class="card-arrow">↗</span></a>
+                </div>
+            </section>
+            <!-- Explore page section -->
+            <section class="explore-section section-pad page-view" data-page="explore" id="explore">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <div><span class="eyebrow">CAMPUS MAP</span>
+                            <h2>Find your way around AdZU
+                            </h2>
+                        </div>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="campus-map-layout campus-map-layout-clean">
+                        <div class="campus-map-frame" id="campusMapFrame">
+                            <img src="assets/adzu-campus-map.jpg" alt="Aerial map of the AdZU campus with building locations" class="campus-map-image"/>
+
+                            <!-- Interactive map pins: aria-label + hover/focus tooltip provide the same information without changing the source map. -->
+                            <div class="map-pin-layer" aria-label="Interactive campus map locations">
+                                <button class="map-pin-hit" type="button" data-map-pin="1" style="--x:27.4%;--y:89.6%;" aria-label="Building 1: University Church of the Sacred Heart of Jesus"><span class="map-tooltip">Building 1 — University Church of the Sacred Heart of Jesus</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="2" style="--x:59.3%;--y:82.3%;" aria-label="Building 2: Bellarmine-Campion Building. Nursing Library — 3rd floor; Infirmary — 1st floor."><span class="map-tooltip">Building 2 — Bellarmine-Campion Building<br/><small>Nursing Library — 3rd floor<br/>Infirmary — 1st floor</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="2A" style="--x:47.4%;--y:91.0%;" aria-label="Building 2A: Bellarmine Hall. College Admissions and Aid Office — 1st floor."><span class="map-tooltip">Building 2A — Bellarmine Hall<br/><small>College Admissions and Aid Office — 1st floor</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="2B" style="--x:71.4%;--y:91.0%;" aria-label="Building 2B: Campion Hall"><span class="map-tooltip">Building 2B — Campion Hall</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="2C" style="--x:59.6%;--y:94.5%;" aria-label="Building 2C: Bellarmine-Campion Quadrangle"><span class="map-tooltip">Building 2C — Bellarmine-Campion Quadrangle</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="3" style="--x:88.0%;--y:73.6%;" aria-label="Building 3: Faustino W. Saavedra Building"><span class="map-tooltip">Building 3 — Faustino W. Saavedra Building</span></button>
+                                <button class="map-pin-hit map-pin-right" type="button" data-map-pin="4" style="--x:92.4%;--y:57.8%;" aria-label="Building 4: Kostka Building"><span class="map-tooltip">Building 4 — Kostka Building</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="5" style="--x:73.6%;--y:60.6%;" aria-label="Building 5: Multi-Purpose Covered Courts II"><span class="map-tooltip">Building 5 — Multi-Purpose Covered Courts II</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="6" style="--x:75.5%;--y:47.9%;" aria-label="Building 6: Sauras Hall. Cafeteria — 1st and 2nd floor."><span class="map-tooltip">Building 6 — Sauras Hall<br/><small>Cafeteria — 1st and 2nd floor</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="7" style="--x:51.9%;--y:71.5%;" aria-label="Building 7: Canisius-Gonzaga Building"><span class="map-tooltip">Building 7 — Canisius-Gonzaga Building</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="7A" style="--x:44.4%;--y:60.7%;" aria-label="Building 7A: Canisius Hall. Office of Student Affairs — 1st floor."><span class="map-tooltip">Building 7A — Canisius Hall<br/><small>Office of Student Affairs — 1st floor</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="7B" style="--x:60.1%;--y:59.3%;" aria-label="Building 7B: Gonzaga Hall. Basic and Advanced Lab — 3rd floor right; CITS Office — 3rd floor."><span class="map-tooltip">Building 7B — Gonzaga Hall<br/><small>Basic &amp; Advanced Lab — 3rd floor right<br/>CITS Office — 3rd floor</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="8" style="--x:49.2%;--y:45.5%;" aria-label="Building 8: Xavier Hall. EL CONSEJO ATENISTA."><span class="map-tooltip">Building 8 — Xavier Hall<br/><small>EL CONSEJO ATENISTA</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="9" style="--x:21.8%;--y:68.3%;" aria-label="Building 9: Learning Resource Center Building. Finance — 1st floor left; Main Library — 2nd floor left; SACSI; ACES; Guidance Office — 1st floor right."><span class="map-tooltip">Building 9 — Learning Resource Center Building<br/><small>Finance — 1st floor left<br/>Main Library — 2nd floor left<br/>SACSI · ACES<br/>Guidance Office — 1st floor right</small></span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="10" style="--x:32.0%;--y:36.1%;" aria-label="Building 10: Jesuit Residence"><span class="map-tooltip">Building 10 — Jesuit Residence</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="11" style="--x:20.0%;--y:9.4%;" aria-label="Building 11: Jose Maria Rosauro Hall"><span class="map-tooltip">Building 11 — Jose Maria Rosauro Hall</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="12" style="--x:56.7%;--y:26.5%;" aria-label="Building 12: Backfield"><span class="map-tooltip">Building 12 — Backfield</span></button>
+                                <button class="map-pin-hit map-pin-right" type="button" data-map-pin="13" style="--x:88.5%;--y:39.5%;" aria-label="Building 13: Multi-Purpose Covered Courts I"><span class="map-tooltip">Building 13 — Multi-Purpose Covered Courts I</span></button>
+                                <button class="map-pin-hit map-pin-right" type="button" data-map-pin="14" style="--x:89.4%;--y:12.1%;" aria-label="Building 14: Physical Plant Office"><span class="map-tooltip">Building 14 — Physical Plant Office</span></button>
+                                <button class="map-pin-hit map-pin-right" type="button" data-map-pin="15" style="--x:83.1%;--y:16.7%;" aria-label="Building 15: Carpentry Shop"><span class="map-tooltip">Building 15 — Carpentry Shop</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="16" style="--x:8.7%;--y:18.0%;" aria-label="Building 16: PCO Warehouse"><span class="map-tooltip">Building 16 — PCO Warehouse</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="17" style="--x:21.1%;--y:48.6%;" aria-label="Building 17: Garage"><span class="map-tooltip">Building 17 — Garage</span></button>
+                                <button class="map-pin-hit" type="button" data-map-pin="18" style="--x:8.4%;--y:60.7%;" aria-label="Building 18: Powerhouse"><span class="map-tooltip">Building 18 — Powerhouse</span></button>
+                                <button class="map-pin-hit map-gate" type="button" data-map-pin="G1" style="--x:79.6%;--y:99.2%;" aria-label="Gate G1: Entrance and exit for vehicles"><span class="map-tooltip">G1 — Entrance/exit for vehicles</span></button>
+                                <button class="map-pin-hit map-gate" type="button" data-map-pin="G2" style="--x:40.4%;--y:99.7%;" aria-label="Gate G2: Pedestrian gate"><span class="map-tooltip">G2 — For pedestrians</span></button>
+                                <button class="map-pin-hit map-gate" type="button" data-map-pin="G3" style="--x:15.8%;--y:80.9%;" aria-label="Gate G3: Exit for vehicles"><span class="map-tooltip">G3 — Exit for vehicles</span></button>
+                                <button class="map-pin-hit map-gate map-pin-top" type="button" data-map-pin="G4" style="--x:11.8%;--y:5.5%;" aria-label="Gate G4: Entrance/exit for vehicles"><span class="map-tooltip">G4 — Entrance/exit for vehicles</span></button>
+                                <button class="map-pin-hit map-gate map-pin-top" type="button" data-map-pin="G5" style="--x:67.6%;--y:10.4%;" aria-label="Gate G5: Emergency gate"><span class="map-tooltip">G5 — Emergency gate</span></button>
+                                <button class="map-pin-hit map-gate map-pin-top" type="button" data-map-pin="G6" style="--x:76.4%;--y:10.9%;" aria-label="Gate G6: Pedestrian gate"><span class="map-tooltip">G6 — For pedestrians</span></button>
+                            </div>
+                        </div>
+                        <div class="campus-details-grid">
+                            <section class="map-detail-card office-detail-card">
+                                <h3>Campus Offices &amp; Facilities
+                                </h3>
+                                <div class="map-location-group">
+                                    <h4>Building 2A
+                                    </h4>
+                                    <p><strong>Admissions</strong><span>1st floor</span>
+                                    </p>
+                                </div>
+                                <div class="map-location-group">
+                                    <h4>Building 9
+                                    </h4>
+                                    <p><strong>Finance Office</strong><span>1st floor · left side</span>
+                                    </p>
+                                    <p><strong>Main Library</strong><span>2nd floor · left side</span>
+                                    </p>
+                                    <p><strong>SACSI</strong><span>Building 9</span>
+                                    </p>
+                                    <p><strong>ACES</strong><span>Building 9</span>
+                                    </p>
+                                    <p><strong>Guidance Office</strong><span>1st floor · right side</span>
+                                    </p>
+                                </div>
+                                <div class="map-location-group">
+                                    <h4>Building 6
+                                    </h4>
+                                    <p><strong>CAF</strong><span>1st and 2nd floors</span>
+                                    </p>
+                                </div>
+                                <div class="map-location-group">
+                                    <h4>Building 7B
+                                    </h4>
+                                    <p><strong>Basic &amp; Advanced Lab</strong><span>3rd floor · right side</span>
+                                    </p>
+                                    <p><strong>CITS Office</strong><span>3rd floor</span>
+                                    </p>
+                                </div>
+                                <div class="map-location-group">
+                                    <h4>Building 7A
+                                    </h4>
+                                    <p><strong>OSA</strong><span>1st floor</span>
+                                    </p>
+                                </div>
+                                <div class="map-location-group">
+                                    <h4>Building 2
+                                    </h4>
+                                    <p><strong>Nursing Library</strong><span>3rd floor</span>
+                                    </p>
+                                    <p><strong>Infirmary</strong><span>1st floor</span>
+                                    </p>
+                                </div>
+                            </section>
+                            <section class="map-detail-card buildings-detail-card">
+                                <h3>Buildings &amp; Areas
+                                </h3>
+                                <ol class="legend-list">
+                                    <li><strong>1.</strong> University Church of the Sacred Heart of Jesus
+                                    </li>
+                                    <li><strong>2.</strong> Bellarmine-Campion Building
+                                    </li>
+                                    <li><strong>2A.</strong> Bellarmine Hall
+                                    </li>
+                                    <li><strong>2B.</strong> Campion Hall
+                                    </li>
+                                    <li><strong>2C.</strong> Bellarmine-Campion Quadrangle
+                                    </li>
+                                    <li><strong>3.</strong> Faustino W. Saavedra Building
+                                    </li>
+                                    <li><strong>4.</strong> Kostka Building
+                                    </li>
+                                    <li><strong>5.</strong> Multi-Purpose Covered Courts II
+                                    </li>
+                                    <li><strong>6.</strong> Sauras Hall
+                                    </li>
+                                    <li><strong>7.</strong> Canisius-Gonzaga Building
+                                    </li>
+                                    <li><strong>7A.</strong> Canisius Hall
+                                    </li>
+                                    <li><strong>7B.</strong> Gonzaga Hall
+                                    </li>
+                                    <li><strong>8.</strong> Xavier Hall
+                                    </li>
+                                    <li><strong>9.</strong> Learning Resource Center Building
+                                    </li>
+                                    <li><strong>10.</strong> Jesuit Residence
+                                    </li>
+                                    <li><strong>11.</strong> Jose Maria Rosauro Hall
+                                    </li>
+                                    <li><strong>12.</strong> Backfield
+                                    </li>
+                                    <li><strong>13.</strong> Multi-Purpose Covered Courts I
+                                    </li>
+                                    <li><strong>14.</strong> Physical Plant Office
+                                    </li>
+                                    <li><strong>15.</strong> Carpentry Shop
+                                    </li>
+                                    <li><strong>16.</strong> PCO Warehouse
+                                    </li>
+                                    <li><strong>17.</strong> Garage
+                                    </li>
+                                    <li><strong>18.</strong> Powerhouse
+                                    </li>
+                                </ol>
+                            </section>
+                            <section class="map-detail-card gates-detail-card">
+                                <h3>Campus Gates
+                                </h3>
+                                <ul class="legend-list gate-list">
+                                    <li><strong>G1</strong> Entrance for vehicles
+                                    </li>
+                                    <li><strong>G2 / G6</strong> For pedestrians
+                                    </li>
+                                    <li><strong>G3</strong> Exit for vehicles
+                                    </li>
+                                    <li><strong>G4</strong> Entrance/exit for vehicles
+                                    </li>
+                                    <li><strong>G5</strong> Emergency gate
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Guides page section -->
+            <section class="guides-section section-pad page-view"  data-page="guides" id="guides">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <div><span class="eyebrow">LESS GUESSING, MORE DOING</span>
+                            <h2>Student guides
+                            </h2>
+                        </div>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="guide-grid">
+                        <article class="guide-card">
+                            <div class="guide-number">01
+                            </div>
+                            <div><span class="tag tag-blue">ACADEMICS</span>
+                                <h3>Enrollment guide
+                                </h3>
+                                <p>Review the official enrollment announcement, prepare the required documents, and follow the instructions from the university.
+                                </p>
+                                <button class="text-button" data-guide="enrollment">View checklist ↗</button>
+                            </div>
+                        </article>
+                        <article class="guide-card">
+                            <div class="guide-number">02
+                            </div>
+                            <div><span class="tag tag-gold">STUDENT RECORDS</span>
+                                <h3>Clearance guide
+                                </h3>
+                                <p>Check the applicable clearance requirements and confirm which offices or departments need to approve your clearance.
+                                </p>
+                                <button class="text-button" data-guide="clearance">View checklist ↗</button>
+                            </div>
+                        </article>
+                        <article class="guide-card">
+                            <div class="guide-number">03
+                            </div>
+                            <div><span class="tag tag-green">PAYMENTS</span>
+                                <h3>Tuition &amp; fees guide
+                                </h3>
+                                <p>Understand the common fees and where to check your official assessment and payment instructions.
+                                </p>
+                                <button class="text-button" data-guide="payment">View guide ↗</button>
+                            </div>
+                        </article>
+                        <article class="guide-card">
+                            <div class="guide-number">04
+                            </div>
+                            <div><span class="tag tag-blue">FINANCIAL AID</span>
+                                <h3>Scholarship guide
+                                </h3>
+                                <p>Explore scholarship options, prepare your documents, and learn where to apply.
+                                </p>
+                                <button class="text-button" data-guide="scholarship">View guide ↗</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- Resources page section -->
+            <section class="resources-section section-pad page-view"  data-page="resources" id="resources">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <div><span class="eyebrow">OFFICIAL DOCUMENTS &amp; REFERENCES</span>
+                            <h2>Guidelines, files &amp; forms
+                            </h2>
+                        </div>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="resource-grid" id="resourceGrid">
+                        <article class="resource-card" data-category="student" data-search="college student handbook 2026 office student affairs handbook">
+                            <div class="resource-copy"><span class="resource-type">STUDENT HANDBOOK · 2026</span>
+                                <h3>AdZU College Student Handbook
+                                </h3>
+                                <p>Student reference for university policies, expectations, services, and campus life.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/COLLEGE%20STUDENT%20HANDBOOK%202026.pdf" rel="noopener noreferrer" target="_blank">Open handbook ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="student" data-search="magna carta higher education undergraduate">
+                            <div class="resource-copy"><span class="resource-type">STUDENT GUIDELINE</span>
+                                <h3>Magna Carta (HE Undergraduate)
+                                </h3>
+                                <p>Reference document for higher education undergraduate students.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/MAGNA%20CARTA%20(HE%20Undergraduate).pdf" rel="noopener noreferrer" target="_blank">Open document ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="student" data-search="parent consent form">
+                            <div class="resource-copy"><span class="resource-type">FORM</span>
+                                <h3>Parent Consent
+                                </h3>
+                                <p>Parent or guardian consent form. Request the current official copy and instructions from OSA.
+                                </p>
+                                <span class="resource-unavailable">Request latest form from OSA</span>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="faculty" data-search="administrative manual 2019 administration">
+                            <div class="resource-copy"><span class="resource-type">ADMINISTRATION · 2019</span>
+                                <h3>Administrative Manual
+                                </h3>
+                                <p>University administrative reference manual.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/Administration-Manual-2019.pdf" rel="noopener noreferrer" target="_blank">Open manual ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="student" data-search="som school of medicine student handbook 2024 2025">
+                            <div class="resource-copy"><span class="resource-type">STUDENT HANDBOOK · 2024–2025</span>
+                                <h3>SOM Student Handbook
+                                </h3>
+                                <p>Student handbook for the School of Medicine.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/SOM%20Student%20Handbook%202024-2025.pdf" rel="noopener noreferrer" target="_blank">Open handbook ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="policy" data-search="chair awards program higher education unit 2019 awards">
+                            <div class="resource-copy"><span class="resource-type">AWARDS PROGRAM · 2019</span>
+                                <h3>The Chair Awards Program for Higher Education Unit
+                                </h3>
+                                <p>Reference for the Chair Awards Program.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/The_Chair_Awards_Program.pdf" rel="noopener noreferrer" target="_blank">Open program ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="faculty" data-search="college faculty manual volume 1 2019">
+                            <div class="resource-copy"><span class="resource-type">FACULTY MANUAL · VOL. 1 · 2019</span>
+                                <h3>College Faculty Manual – Volume 1
+                                </h3>
+                                <p>Faculty reference manual, first volume.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/Faculty-Manual-2019-Volume-1.pdf" rel="noopener noreferrer" target="_blank">Open manual ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="faculty" data-search="college faculty manual volume 2 2019">
+                            <div class="resource-copy"><span class="resource-type">FACULTY MANUAL · VOL. 2 · 2019</span>
+                                <h3>College Faculty Manual – Volume 2
+                                </h3>
+                                <p>Faculty reference manual, second volume.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/Faculty-Manual-2019-Volume-2.pdf" rel="noopener noreferrer" target="_blank">Open manual ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="privacy" data-search="data privacy notice admission consent personal information">
+                            <div class="resource-copy"><span class="resource-type">DATA PRIVACY</span>
+                                <h3>Data Privacy Notice
+                                </h3>
+                                <p>Higher education admission privacy notice and consent information.
+                                </p>
+                                <a href="https://adzu.edu.ph/wp-content/uploads/2020/07/ADZU-Higher-Ed-Admission-Privacy-Notice-and-Consent-page-001-1.jpg" rel="noopener noreferrer" target="_blank">View privacy notice ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="student" data-search="guidelines related to accidents accident incident OSA clinic infirmary reporting insurance">
+                            <div class="resource-copy"><span class="resource-type">OSA · STUDENT SAFETY GUIDELINE</span>
+                                <h3>Guidelines Related to Accidents
+                                </h3>
+                                <p>Official OSA document covering accident response, clinic assistance, parent notification, follow-up, insurance, and incident reporting.
+                                </p>
+                                <a href="assets/osa/Guidelines_Related_to_Accidents.pdf" rel="noopener noreferrer" target="_blank">Read guidelines (PDF) ↗</a><br/><a href="assets/osa/Guidelines_Related_to_Accidents.docx" download>Download original DOCX ↓</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="policy" data-search="grade point system revised faculty guide gps">
+                            <div class="resource-copy"><span class="resource-type">ACADEMIC POLICY</span>
+                                <h3>Grade Point System – Revised Faculty Guide
+                                </h3>
+                                <p>Faculty guide reference for the revised grade point system.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/GPS%20Faculty.pdf" rel="noopener noreferrer" target="_blank">Open guide ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="policy" data-search="intellectual property policy ip">
+                            <div class="resource-copy"><span class="resource-type">UNIVERSITY POLICY</span>
+                                <h3>Intellectual Property Policy
+                                </h3>
+                                <p>University policy reference concerning intellectual property.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/AdZU%20IP%20Policy.pdf" rel="noopener noreferrer" target="_blank">Open policy ↗</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="policy" data-search="sexual harassment codi committee decorum investigation OSA complaint procedure confidentiality">
+                            <div class="resource-copy"><span class="resource-type">OSA · STUDENT PROTECTION POLICY</span>
+                                <h3>Policy on Sexual Harassment – CODI
+                                </h3>
+                                <p>Official university policy covering definitions, classifications, penalties, complaint procedures, the Committee on Decorum and Investigation (CODI), and confidentiality.
+                                </p>
+                                <a href="assets/osa/Policy_on_Sexual_Harassment_CODI.pdf" rel="noopener noreferrer" target="_blank">Read policy (PDF) ↗</a><br/><a href="assets/osa/Policy_on_Sexual_Harassment_CODI.docx" download>Download original DOCX ↓</a>
+                            </div>
+                        </article>
+                        <article class="resource-card" data-category="policy" data-search="program protocol guidelines events">
+                            <div class="resource-copy"><span class="resource-type">EVENT GUIDELINES</span>
+                                <h3>Program Protocol Guidelines
+                                </h3>
+                                <p>Reference guidelines for university program protocols.
+                                </p>
+                                <a href="https://my.adzu.edu.ph/guidelines/Program%20Protocol%20Guidelines.pdf" rel="noopener noreferrer" target="_blank">Open guidelines ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="resource-empty" hidden="" id="resourceEmpty">No matching resources found. Try another keyword or category.
+                    </p>
+                </div>
+            </section>
+            <!-- Faq page section -->
+            <section class="faq-section section-pad page-view"  data-page="faq" id="faq">
+                <div class="wrap faq-layout">
+                    <div><span class="eyebrow">NEED A QUICK ANSWER?</span>
+                        <h2>Frequently asked<br/><em>questions.</em>
+                        </h2>
+                        <p>
+                        </p>
+                        <a class="btn btn-primary" href="https://www.adzu.edu.ph/" rel="noopener noreferrer" target="_blank">Visit official AdZU website ↗</a>
+                    </div>
+                    <div class="faq-list">
+                        <details>
+                            <summary>Where can I find my classroom?
+                            </summary>
+                            <p>Check your official class schedule and ask your department or campus personnel to confirm the room location.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Where can I confirm enrollment requirements?
+                            </summary>
+                            <p>Use the latest official enrollment announcement or contact the university office responsible for admissions and enrollment.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How do I complete my clearance?
+                            </summary>
+                            <p>Check the current clearance instructions and confirm all required sign-offs with the relevant offices.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>How can I find student organizations?
+                            </summary>
+                            <p>Look for official university or student affairs announcements and verify each organization's current membership process.
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Does ADZU BUDDY process payments or enrollment?
+                            </summary>
+                            <p>No. This project is an information guide only. It does not process enrollment, registration, payments, or official clearances.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <!-- Organizations page section -->
+            <section class="org-section section-pad page-view"  data-page="organizations" id="organizations">
+                <div class="wrap">
+                    <div class="section-heading">
+                        <div><span class="eyebrow">FIND YOUR PEOPLE</span>
+                            <h2>ADZU student organizations
+                            </h2>
+                        </div>
+                        <p>
+                        </p>
+                    </div>
+                    <div class="org-intro">
+                        <a class="btn btn-outline" href="https://www.facebook.com/share/p/18iVcY8JXJ/" rel="noopener noreferrer" target="_blank">View original ADZU organizations post ↗</a>
+                    </div>
+                    <div class="org-directory" id="orgDirectory">
+                        <section class="org-cluster" data-cluster="Student Government">
+                            <div class="org-cluster-heading">
+                                <h3>Student Government
+                                </h3>
+                                <span>1 organizations</span>
+                            </div>
+                            <div class="org-grid">
+                                <article class="org-card" data-description="the university-wide student government that represents and serves the student body." data-name="el consejo atenista">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for EL CONSEJO ATENISTA" loading="lazy" src="https://scontent.fceb6-6.fna.fbcdn.net/v/t39.30808-6/763805614_1360147849664313_483191355372672410_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=104&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=J_VOw4XIcF8Q7kNvwFU32A1&amp;_nc_oc=Adpk_hmT-ykJqJWb_Fzy7SReADeFA9lApGeURyPZAy8E2-GWG6hgHAWm_62kvMb4HhI&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-6.fna&amp;_nc_gid=R4tkbshyuop9oZpjdpcC9Q&amp;_nc_ss=7b289&amp;oh=00_AQRFjYhuQZxbA7JMiCY6G5PZaHEPYTnZcUgFAjwSkKSwoQ&amp;oe=6AECF471"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Student Government</span>
+                                        </div>
+                                        <h4>EL CONSEJO ATENISTA
+                                        </h4>
+                                        <p>The university-wide student government that represents and serves the student body.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzueca" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="org-cluster" data-cluster="Academic Organizations">
+                            <div class="org-cluster-heading">
+                                <h3>Academic Organizations
+                                </h3>
+                                <span>6 organizations</span>
+                            </div>
+                            <div class="org-grid">
+                                <article class="org-card" data-description="a student organization for learners in the accountancy program." data-name="aao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for AAO" loading="lazy" src="https://scontent.fceb6-2.fna.fbcdn.net/v/t39.30808-6/285388103_544960800552288_5892723212401974618_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx959x959&amp;ctp=s959x959&amp;_nc_cat=105&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=YWVEnh9S940Q7kNvwGLX3oz&amp;_nc_oc=AdoyglmRwgofxWQNw00GVUnSqZDVEFarKeETFKGBc2aP7V8fOAX-gXzSvdHrSH6dU-I&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-2.fna&amp;_nc_gid=B6pES5Z-DOTA2XCrFSuEvQ&amp;_nc_ss=7b289&amp;oh=00_AQSBLELnuP83yFICynfRRTceGN1-ttayYM6rgRUNAAzQEQ&amp;oe=6AECECF2"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>AAO
+                                        </h4>
+                                        <p>A student organization for learners in the Accountancy program.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/AAOArdentTigers" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization representing students in education." data-name="eao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for EAO" loading="lazy" src="https://scontent.fceb6-6.fna.fbcdn.net/v/t39.30808-6/720228579_1308559441409868_4203791878181180408_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2000x2000&amp;ctp=s2000x2000&amp;_nc_cat=102&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_ohc=PGaq07WP3BYQ7kNvwG-_-fD&amp;_nc_oc=AdoV52Dp0WpVZorPiStMsWt__iexMtNONP4W5EJkHwDATFuoloBwL3WeG9hmrOeRjeg&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-6.fna&amp;_nc_gid=xSC43OXU_-pokRTke58H-w&amp;_nc_ss=7b289&amp;oh=00_AQQYcHz7K5yPR9LsC5xH5xrJb6r7NaILR8MHefhZ9KfKRQ&amp;oe=6AECE473"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>EAO
+                                        </h4>
+                                        <p>An academic organization representing students in Education.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzueao" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization for students in science, information technology, and engineering fields." data-name="siteao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for SITEAO" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.99422-6/771998487_2668732256876786_8405432317653490983_n.png?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeEeinpmWfqohUkE5DsAclRLXFkTEz_MsLpcWRMTP8ywukTQNYi4aiVBcWrkn0fdGX5ULoaEtRYAmeENNP_GkKAl&amp;_nc_ohc=ce4gXPzOmukQ7kNvwFYW-h0&amp;_nc_oc=AdoDwvmK8qlNa9arrjhbFJxGZ-HXhKzj_lMFLt2vmwg7l0EIMn3rWK-Ch1xKhu155sM&amp;_nc_zt=14&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=TVGP6mGAOG2ZKuy4O0JteQ&amp;_nc_ss=7b2a8&amp;oh=00_AQRyyleCvu1HVNmnMEaboWz0WmaLzAycDhKid_mTap-hRw&amp;oe=6AECF92A"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>SITEAO
+                                        </h4>
+                                        <p>An academic organization for students in science, information technology, and engineering fields.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzusiteao" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization for students in the nursing program." data-name="nao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for NAO" loading="lazy" src="https://scontent.fceb6-6.fna.fbcdn.net/v/t39.30808-6/712469519_1308532414821759_287393827387120785_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=111&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGQoSO0fpTrn24v5dUwZL1puTToGLwcO6q5NOgYvBw7qqEgqbijNADTKG5ii-34HNiJGRVJjUp1fqYp0pO5MPu2&amp;_nc_ohc=Ded_3mqSJeEQ7kNvwHuaQe9&amp;_nc_oc=AdpVKxC2iLXWb39WF3E_Sa90klbb6B9Lzyp_21ho0j21pYDQwHMqxa_XEUk4MxjgBuA&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-6.fna&amp;_nc_gid=IfcAmdQg-JAeTDBSlKJ_wQ&amp;_nc_ss=7b2a8&amp;oh=00_AQR4PsSiIW3Ihb7VRAa3YnniPp0vIyu2QjtDcPE4B4T7Aw&amp;oe=6AED0578"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>NAO
+                                        </h4>
+                                        <p>An academic organization for students in the Nursing program.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/share/1QW1ZXYFib/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization for students in management." data-name="mao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for MAO" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/793204098_1474004161430604_6467774717046278673_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx828x828&amp;ctp=s828x828&amp;_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGW3Spa86raO5zL0Crzi8PIszDVJxUENuWzMNUnFQQ25f55FX6_ZCJ9GdgB__6772OQYLrnK1XoiRWEgPlXVuCH&amp;_nc_ohc=i5dukMTZXSwQ7kNvwEpAFb1&amp;_nc_oc=AdqKIHtPurCgh8bTqzWxVZXChOrkgRasEcfWXw-1OU2EMx1EMFb1iSo3teJX-g7t_UA&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=7kNrkBb6AAnQozscEOW9Gg&amp;_nc_ss=7b2a8&amp;oh=00_AQTaX-uIn3FtiESB8jwkiD1binqs-6lU42qybyuU3--NHQ&amp;oe=6AECD98C"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>MAO
+                                        </h4>
+                                        <p>An academic organization for students in Management.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/AdZUMAOLIONS" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization representing liberal arts students." data-name="laao">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for LAAO" loading="lazy" src="https://scontent.fceb6-6.fna.fbcdn.net/v/t39.99422-6/718390847_1488825572319470_3843104608896967926_n.png?stp=dst-jpg_tt6&amp;cstp=mx1080x1080&amp;ctp=s1080x1080&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGr4OTNJ7-yJQwcOZfyqkdDU6GwiHFHbq5TobCIcUdurjXUCoKjgbZRjec1gPsZauJiJ9jtcHr-UrOSnsoFh4br&amp;_nc_ohc=DfV7mY83YFcQ7kNvwGcDWP2&amp;_nc_oc=AdpHXEsPdTHW-sJRQ-M5ucmtUXRENl0rsJuX5KRDm1Sv8KPW4e73HN1hq_on5AJ0m8o&amp;_nc_zt=14&amp;_nc_ht=scontent.fceb6-6.fna&amp;_nc_gid=pO8U4GUn3YWT1msEd4EQdA&amp;_nc_ss=7b2a8&amp;oh=00_AQTp3aA47Dez4AxFXvXRI9n23ZM0h0se8cm1ejmUuFDvyw&amp;oe=6AECDF83"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Organizations</span>
+                                        </div>
+                                        <h4>LAAO
+                                        </h4>
+                                        <p>An academic organization representing Liberal Arts students.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzulaao" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="org-cluster" data-cluster="Academic Cluster">
+                            <div class="org-cluster-heading">
+                                <h3>Academic Cluster
+                                </h3>
+                                <span>12 organizations</span>
+                            </div>
+                            <div class="org-grid">
+                                <article class="org-card" data-description="the adzu chapter of the institute of computer engineers of the philippines. listed as a new organization in the supplied graphic." data-name="icep-adzu">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ICEP-ADZU" loading="lazy" src="https://scontent.fceb6-2.fna.fbcdn.net/v/t39.30808-6/854186413_1498775605633121_6746714888506672947_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1250x1250&amp;ctp=s1250x1250&amp;_nc_cat=109&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeE3UeRozTyzZwJI8pprMeUw-hVbhzKMdI76FVuHMox0jv7Ad9Jt3RdqROr3cHPQ9pym9KP5ILv2GIcB_yHHlCr4&amp;_nc_ohc=Ha_6O8_vmv8Q7kNvwE9GUYp&amp;_nc_oc=AdpbH4I09SnfBe0gM-nWNX5_NESIaq1m06BC8yMRns_N7aUn9rAfWEHx_PVjLF9QEPY&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-2.fna&amp;_nc_gid=Mq_rputBcYdf73Ob7IskUQ&amp;_nc_ss=7b2a8&amp;oh=00_AQQ9reQmXwHjFFJ0P4a7hG5FWT-6f5agffYbzqKwc6xQXw&amp;oe=6AECE072"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span><span class="org-new">NEW</span>
+                                        </div>
+                                        <h4>ICEP-ADZU
+                                        </h4>
+                                        <p>The AdZU chapter of the Institute of Computer Engineers of the Philippines. Listed as a new organization in the supplied graphic.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/icpepadzu" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic community for students interested in computing and information technology." data-name="aicg">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for AICG" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/702328170_122170737794743605_8862423667500390085_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1000x1000&amp;ctp=s1000x1000&amp;_nc_cat=110&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeHGtJlubhBqluPI31YYG3k7HVYzoT_UETYdVjOhP9QRNhrqIQJmOkJNmE6f3jP2-otkq-xDrpS_zTVkNRYvBpFB&amp;_nc_ohc=HXj221Bp-4EQ7kNvwE3niz0&amp;_nc_oc=AdqXaABVZ9pjy6kJEEKMJ_9XzEvVw7U3lGQHsTdCMG-g9_BLR8Fuxi7dDUnXQS26_0I&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=X0GrgjIGEbRnVkVqXGca6Q&amp;_nc_ss=7b2a8&amp;oh=00_AQRQfuOsmiY9rivzunRwGe5Kz5JQAnL7d6ylNhdtfgVAGQ&amp;oe=6AECE3A0"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>AICG
+                                        </h4>
+                                        <p>An academic community for students interested in computing and information technology.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/profile.php?id=61572308169719" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="Google Developer Groups on Campus at Ateneo de Zamboanga University." data-name="gdg-adzu">
+                                    <div class="org-photo"><img alt="Google Developer Groups on Campus AdZU emblem" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/763847753_1365774612310368_7992674819122085439_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2000x2000&amp;ctp=s2000x2000&amp;_nc_cat=100&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeEhR7dZ2jWSj7vlEFwM6VdIvSW2GeF0xB69JbYZ4XTEHgPtT2-UcSyX1Ez5tFy1oerQ7y7B1feo3pAQt8G2tvtM&amp;_nc_ohc=tYYF9MmffSYQ7kNvwHF_L7A&amp;_nc_oc=Adpvy52xZckZKqDiPmUwYAbyiTlWHC3SaBSJNJoafbwBvPyf14Dn1rhqtPL_kt8JhsU&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=pm8ioqypYC8QmXWOBDGQCA&amp;_nc_ss=7b2a8&amp;oh=00_AQRpH_k44y54O0YmYRsFvdrWteeVjIRFJ5gGaKHP24_5oQ&amp;oe=6AED074A"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span><span class="org-new">NEW</span>
+                                        </div>
+                                        <h4>GDG ON CAMPUS ADZU
+                                        </h4>
+                                        <p>A campus community for students interested in Google technologies, development, and tech learning.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/gdgocblueeagle" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="the international studies organization of ateneo, connecting students interested in global affairs." data-name="isoa">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ISOA" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/728984481_1352240097020327_6975276016043690012_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx680x680&amp;ctp=s680x680&amp;_nc_cat=107&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeEMuIlFNsLWopJNEkI4pT0fdooKIc26-9J2igohzbr70skwo0CT-8VkW4xQvI2ufgvXsLaNvfnaI3KFzT0pGLVr&amp;_nc_ohc=tC_KUsW5WOYQ7kNvwHP-Til&amp;_nc_oc=AdrkvLJIymk9Lk7mkkaPvumOTi4bgSfanDHMbNNDs8d7MAVbiTRQKiBNpGQ9PETuYi0&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=7w73qSAZchlQUC-fOG52Lw&amp;_nc_ss=7b2a8&amp;oh=00_AQRcZhSWq7c9q7fwqfSvQH0jUUzIoq2L-tSmNOeHXgfSfA&amp;oe=6AED0545"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>ISOA
+                                        </h4>
+                                        <p>The International Studies Organization of Ateneo, connecting students interested in global affairs.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/intsisoa" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student community that supports academic excellence and scholarly engagement." data-name="society of ateneo scholars">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for SOCIETY OF ATENEO SCHOLARS" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.99422-6/731163663_1644020644398440_4029501114985998336_n.png?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeFVGT6sdTECC9s3387r0-BZf_RZy0xeA3V_9FnLTF4DdUmrTVPfaH-riQy-3jaiJRZUwaj4lcCMOKmYnaHHAlny&amp;_nc_ohc=JH0-C7M-wTwQ7kNvwG2wOF1&amp;_nc_oc=AdokljPjhIu6ceqZC38Z56_KwJNh--0zy-Pq0lNUi2R2XSfQ2U3qXLx013dswhKgtDs&amp;_nc_zt=14&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=otY5l0aBpXEI83T4Uveknw&amp;_nc_ss=7b2a8&amp;oh=00_AQQ-G3gZvSb9n0dQjgPJyrav7N8gJP1w6hZJHT5JdHEnRA&amp;oe=6AED088A"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>SOCIETY OF ATENEO SCHOLARS
+                                        </h4>
+                                        <p>A student community that supports academic excellence and scholarly engagement.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/SocietyOfAteneoScholars" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a communications-focused student organization listed as new in the supplied list." data-name="atcomm">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ATCOMM" loading="lazy" src="https://scontent.fceb6-6.fna.fbcdn.net/v/t39.99422-6/756342235_2272000786879047_6189544354025056801_n.png?stp=dst-jpg_tt6&amp;cstp=mx1792x1792&amp;ctp=s1792x1792&amp;_nc_cat=110&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeEM2nt8pmUIQZo60RIy9RujGnW5B-52NAgadbkH7nY0CLzSzE4AXDO4C5PnIyRDJVnJZPD5vKx1YtdNUt61Qbc1&amp;_nc_ohc=TjuAJ9rNs34Q7kNvwEypy1U&amp;_nc_oc=Adpl3PINf4-_3MxKR75ItpdWL9FSgDC7zghXiZajYIuXpHoX4omFWthy2VB-d4pRHeY&amp;_nc_zt=14&amp;_nc_ht=scontent.fceb6-6.fna&amp;_nc_gid=cwiimpQesQIOxtPE-s7E2w&amp;_nc_ss=7b2a8&amp;oh=00_AQSIYSCliGvTrmkHybz_ukugCeIBfcISSglbXP6OO7AUmg&amp;oe=6AECDF63"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span><span class="org-new">NEW</span>
+                                        </div>
+                                        <h4>ATCOMM
+                                        </h4>
+                                        <p>A communications-focused student organization listed as new in the supplied list.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/TheAteneoCommunicators" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="an academic organization for students in the related engineering and computing fields." data-name="adzu - ices">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ADZU - ICES" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/721411567_122251389794101043_4461450911389974309_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1080x1080&amp;ctp=s1080x1080&amp;_nc_cat=108&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeEvQaqlERRO58ANUDlgq7cKGBq59qR5M0UYGrn2pHkzRT1zqXNYAjUmN7pnSdWRtwznK795qrgYVVXSJGPfvzel&amp;_nc_ohc=uBOjImbbVSwQ7kNvwF4rHUX&amp;_nc_oc=AdouAdnUir52DOzmaCTiq1uj_IZzUrGMj3w5poLbanxtwbiFL5_HUyTi-KWBnwCNNkg&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=hXoQk64tr-Uey3ZKDzy8uA&amp;_nc_ss=7b2a8&amp;oh=00_AQRNNPfFzBaNILTwXAxqqITxEqyI7s3gk-n9qPwX7eZP2w&amp;oe=6AECDAE6"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>ADZU - ICES
+                                        </h4>
+                                        <p>An academic organization for students in the related engineering and computing fields.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzuices" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student group for philosophical discussion, reflection, and learning." data-name="samahang pilosopiya ng ateneo">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for SAMAHANG PILOSOPIYA NG ATENEO" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/535988607_1237703708153196_5952223314318050631_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1000x1000&amp;ctp=s1000x1000&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeH0shyCqdV4UQs1RLFKS-0s-517kSrbW2r7nXuRKttbalRJQL_SwcV6o1MfBSlLIntQticTHJ3OFpeHMXZs3xhg&amp;_nc_ohc=Wnbd-DeOUWoQ7kNvwHT7fVs&amp;_nc_oc=Adrljwdlm1tya_hYGTo6QPI2snADw54aFHB8HEnnSr-Q6kRwXaXCXVMIUqPI-qjlQWE&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=LhT7s4XjnrmOXIz8LDfCCg&amp;_nc_ss=7b2a8&amp;oh=00_AQTNtDRp9zqUBjivjvIAnTauZ9hsgMiRuFPTMm5J1BzzKg&amp;oe=6AECFDCA"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>SAMAHANG PILOSOPIYA NG ATENEO
+                                        </h4>
+                                        <p>A student group for philosophical discussion, reflection, and learning.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/ateneo.spa" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="the junior philippine institute of accountants chapter at adzu." data-name="jpia-adzu">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for JPIA-ADZU" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/382611026_658264976411332_8814429933331686315_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=109&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeG5hBaT4Ng0_YITW-ZKEkozUrj-eJiQ5upSuP54mJDm6oeu_pD6d9ZwfVfoN5aSlSMekpQizPfLbrBwDBnzXuo8&amp;_nc_ohc=Cc8LiJRNXawQ7kNvwG9KH9w&amp;_nc_oc=AdqKepIIUDufd9WsMEuOskIHoKn_Eh5TlsD-snZ-9oeS4vWEXSOtZUbfceWzWU1-nGQ&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=lZQNTTROFr_LkMXy5RIbKw&amp;_nc_ss=7b2a8&amp;oh=00_AQRsf5J8ynR49jN8zfFJv8-MlZ1XtiWnlesFOk16rLRtVA&amp;oe=6AECDAFB"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>JPIA-ADZU
+                                        </h4>
+                                        <p>The Junior Philippine Institute of Accountants chapter at AdZU.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/JPIA.AdZULocalChapter" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student organization connected with psychology and peer support." data-name="ateneo psych icare">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ATENEO PSYCH ICARE" loading="lazy" src="https://scontent.fceb6-2.fna.fbcdn.net/v/t39.99422-6/750278343_1861932784770900_1082999732581411867_n.png?stp=dst-jpg_tt6&amp;cstp=mx2000x2000&amp;ctp=s2000x2000&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGzL1UkALbvYcPlOzCu5z0bNmny_RSNePQ2afL9FI149Oq6JpDv0qKE4Ix5I7xKXTZBuR68Ch4fFoTb5ySa1whO&amp;_nc_ohc=7lXL-rbk3PQQ7kNvwFIvHXo&amp;_nc_oc=AdrBmf4-PA2v1OHWO5m9LlCBVUfUgiOtPZKYTJ0AODfKJGmfWAUe_px_eD51eKK1pC0&amp;_nc_zt=14&amp;_nc_ht=scontent.fceb6-2.fna&amp;_nc_gid=XsiwsfiIqFHn5r2tEUoayQ&amp;_nc_ss=7b2a8&amp;oh=00_AQQY9E6-1SkZAWsMXaVvhKixx1cXRmkcleTdxCo7Um-I7A&amp;oe=6AECE589"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>ATENEO PSYCH ICARE
+                                        </h4>
+                                        <p>A student organization connected with psychology and peer support.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzupsychicare" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student community for interest in biology and the life sciences." data-name="ateneo biological society">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ATENEO BIOLOGICAL SOCIETY" loading="lazy" src="https://scontent.fceb6-2.fna.fbcdn.net/v/t39.30808-6/732226704_1374498431444276_1070265513132745934_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx938x938&amp;ctp=s938x938&amp;_nc_cat=104&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeH8NiO3FdurPKpz_q2uqR-5a0Uin_yC9SxrRSKf_IL1LEuNyf_wa6HkyzIeVckCHaMvfdIWAOGC4dWjwAt795y_&amp;_nc_ohc=9GGheBXdZsYQ7kNvwH4ihaZ&amp;_nc_oc=AdqNtS9PIkqivVgw3umZv4kvWp4Wc5Hco9x0a0ViklOcttcQr1CGGomya6GWJ2v5IrM&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-2.fna&amp;_nc_gid=ITFsiaF4pIpvfHfr1-e37A&amp;_nc_ss=7b2a8&amp;oh=00_AQRdpkPmK-aXMoATeaZLQ8Or2tt5F-R7wcYcBjq3HntzQA&amp;oe=6AECFC7B"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>ATENEO BIOLOGICAL SOCIETY
+                                        </h4>
+                                        <p>A student community for interest in biology and the life sciences.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/AteneoBioSociety" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="the junior marketing association chapter at adzu." data-name="jma-adzu">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for JMA-ADZU" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/525714075_122112020594941773_2455163646345035929_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx750x748&amp;ctp=s750x748&amp;_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGKQYJi2c0fysCKHo3qtXQSHAIo6nZoL08cAijqdmgvT8zs4oPEcmlgnHq_SefTkhh5VCVnF20MwFeWm3mZIZml&amp;_nc_ohc=kl-UgOaAstYQ7kNvwHxh42P&amp;_nc_oc=Adr_YvznJEMVttL9UjiNu9hqHtBNpOfKwQ3HQZwQ6-WuMpuMl7NTaSCJiaQKqPVtkjA&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=cNhxoRTdjtvC99qPxpT4LA&amp;_nc_ss=7b2a8&amp;oh=00_AQTZaUWQrQOI1u_e9PwEA7DzdwIrmUWqNYS_4B1Nw2bPhw&amp;oe=6AED06B0"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Academic Cluster</span>
+                                        </div>
+                                        <h4>JMA-ADZU
+                                        </h4>
+                                        <p>The Junior Marketing Association chapter at AdZU.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzujma" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <section class="org-cluster" data-cluster="Culture, Arts, and Multimedia Cluster">
+                            <div class="org-cluster-heading">
+                                <h3>Culture, Arts, and Multimedia Cluster
+                                </h3>
+                                <span>6 organizations</span>
+                            </div>
+                            <div class="org-grid">
+                                <article class="org-card" data-description="ateneo blue vigors, a student group for performance and school spirit." data-name="abv">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ABV" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/183968864_5727240860682816_8989201118739077839_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=106&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeG-v-Jb7_6pCzdppvJIzU7JPqPFIo85D3w-o8UijzkPfKCHxaFcRXt2TcPGuRXNzY5RKxuXBBBOAfusmMus9GwH&amp;_nc_ohc=Na57uXPfL8kQ7kNvwHqKa8H&amp;_nc_oc=Adq4Iz0bYWC4MzJrv8JUqaB8kLFlqZF7zWgNnk-fX7jHLGFtrcIliyGcueGgybAP-6w&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=Xl2NxlFSF7OLHyLkiGHuzg&amp;_nc_ss=7b2a8&amp;oh=00_AQRXQ98mlYURKGYSbSs9KMZr6DU_3hIn0AVD9quHu5cfgw&amp;oe=6AECFD79"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span>
+                                        </div>
+                                        <h4>ABV
+                                        </h4>
+                                        <p>Ateneo Blue Vigors, a student group for performance and school spirit.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/ateneobluevigor?mibextid=wwXIfr&amp;rdid=0zLtn2kKAgwjl1OQ&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1VSckyoAJq%2F%3Fmibextid%3DwwXIfr#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student organization listed as new in the supplied accreditation list." data-name="aepep">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for AEPEP" loading="lazy" src="https://scontent.fceb6-5.fna.fbcdn.net/v/t39.30808-6/769131216_122206041770439718_4970247403703254763_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1792x1792&amp;ctp=s1792x1792&amp;_nc_cat=111&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeHuEZ8__L-myJUvPLmh8YPNUUJAusFfEptRQkC6wV8Sm7UHxR7qkI2Lp7cqm7AapCPNuupd_GwFj7WMtVTAv_yR&amp;_nc_ohc=xNBYmhKXsjsQ7kNvwFoq9Ww&amp;_nc_oc=AdqowFxjnSZ0B1d8eVUt4xvN7FqWAnaaLZjYPh4B_2WuuGvWSbPMQO-QQ6PYQCCUM5w&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-5.fna&amp;_nc_gid=SqV7KxwfDt6ikX0ZxUDeqQ&amp;_nc_ss=7b2a8&amp;oh=00_AQSKY3N3lvuvQCGBVuRk7_I3ckXQq10P7AFcJ2KSKeoeCA&amp;oe=6AECF98B"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span><span class="org-new">NEW</span>
+                                        </div>
+                                        <h4>AEPEP
+                                        </h4>
+                                        <p>A student organization listed as new in the supplied accreditation list.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/profile.php?id=61563191549045&amp;mibextid=wwXIfr&amp;rdid=qlCVBjrXpcNjkXdK&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19NEEdSZ16%2F#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a community for students interested in music and musical activities." data-name="ateneo music club">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ATENEO MUSIC CLUB" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/729953417_122326506494068858_3118637869994513346_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx960x960&amp;ctp=s960x960&amp;_nc_cat=111&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeHcZdcMOHe-vXXdUCgj1EzXPvFzmEBL99Y-8XOYQEv31hfTwApMlJAoguqTrnT56v3Uv5zyJqCVO1CQYQOaqR7R&amp;_nc_ohc=i9eYjlcAK8sQ7kNvwG1iv_6&amp;_nc_oc=AdrD6OMUrLdU4zu_ItX8cAmMab1K07YoFjoN4Rx0Fb1r85MJgtqwDr1yPC19v5mBNhs&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=Yc15r3ev__K-ZI_JQCPDRQ&amp;_nc_ss=7b2a8&amp;oh=00_AQSauqdLKm4H_6Zr4xV_PIOmcGns08po4kmJLoZTjBNa2A&amp;oe=6AECEE73"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span>
+                                        </div>
+                                        <h4>ATENEO MUSIC CLUB
+                                        </h4>
+                                        <p>A community for students interested in music and musical activities.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/profile.php?id=61552065752807&amp;mibextid=wwXIfr&amp;rdid=fje9km3nTsZDRklx&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19uQtLVtSa%2F#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a student organization for creativity, visual arts, and artistic expression." data-name="artco-adzu">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ARTCO-ADZU" loading="lazy" src="https://scontent.fceb6-4.fna.fbcdn.net/v/t39.30808-6/754498178_122187596966898169_8177861178887574292_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx2048x2048&amp;ctp=s2048x2048&amp;_nc_cat=105&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeH6FWaPT-3ZUySUKuQ57bclsFOJyEtP24GwU4nIS0_bgXJKp3sYshF9h7T4902auP7Vf1JNt9mu4WZhTU0SEl5X&amp;_nc_ohc=dfTFKCBeioYQ7kNvwEVvEcQ&amp;_nc_oc=AdqpS2ThG4tANG6QzJvBNYzEpJ_r4M5-yGkwOhbhEtBal3F7N244TQDd6OD7esAascM&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-4.fna&amp;_nc_gid=akPvVZGYC9PyiStt2kdrOw&amp;_nc_ss=7b2a8&amp;oh=00_AQR-fG2_Q-Q4SuLg6yaJ3Mh6eRU-d77ZOVmsAFkxfc4eIg&amp;oe=6AECE4E9"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span>
+                                        </div>
+                                        <h4>ARTCO-ADZU
+                                        </h4>
+                                        <p>A student organization for creativity, visual arts, and artistic expression.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/profile.php?id=61576945077566&amp;mibextid=wwXIfr&amp;rdid=Ge3oxPA7wi5YivCf&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19bQrn29MJ%2F#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="a vocal and choral group for students who enjoy singing." data-name="adzu glee club">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for ADZU GLEE CLUB" loading="lazy" src="https://scontent.fceb6-3.fna.fbcdn.net/v/t39.30808-6/738188398_1532856442185179_7256842512735298190_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1080x1080&amp;ctp=s1080x1080&amp;_nc_cat=101&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeGQNruY4h1r5bdbqfOVPps4PYUlCcnYJYM9hSUJydglg58QT5jfWPjKHzBWqIUKtDH_OAaak1XbNxioosSzMbub&amp;_nc_ohc=XLYG7xMYS5EQ7kNvwGYMYXL&amp;_nc_oc=AdpRPKuh169OuCBg82Uc705anjNroBVMQmyZz3mdqwRJNAC1tDs4XrVdR6VFNWUK-pg&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-3.fna&amp;_nc_gid=yICx7yqh_Q0OU9AWHxb8dA&amp;_nc_ss=7b2a8&amp;oh=00_AQSPDGWSHxYgFZFfVZtiOjXjiQVMowNtSmml7ElGikkD2w&amp;oe=6AECE1F4"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span>
+                                        </div>
+                                        <h4>ADZU GLEE CLUB
+                                        </h4>
+                                        <p>A vocal and choral group for students who enjoy singing.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/adzugleeclub?mibextid=wwXIfr&amp;rdid=iuGmjXDu1C0sd3Va&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KjaZazdPW%2F#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                                <article class="org-card" data-description="teatro ateneo de zamboanga, a student theater and performing arts group." data-name="taz">
+                                    <div class="org-photo"><img alt="Cropped organization emblem for TAZ" loading="lazy" src="https://scontent.fceb6-2.fna.fbcdn.net/v/t39.30808-6/758401052_1343844904529580_985778723542814397_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx960x960&amp;ctp=s960x960&amp;_nc_cat=110&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=6ee11a&amp;_nc_eui2=AeG6CEgw0zsaFt_MlItnt2BRsxjIG6IXK8KzGMgbohcrwvvvEn-F5WTP7ADds10HL7AEOQ0K509W7ddLQCEbZL4K&amp;_nc_ohc=gp9EKFkCQLgQ7kNvwEM4skJ&amp;_nc_oc=AdodkTzkrrJiOaM6A8fwKGVF_l2Ua6_5GyssZJxkyByY0GN4Y628dj4-bQR99gFphEk&amp;_nc_zt=23&amp;_nc_ht=scontent.fceb6-2.fna&amp;_nc_gid=oljPYYdS3Y7jt0CF4sCb1A&amp;_nc_ss=7b2a8&amp;oh=00_AQR7H4AFOApdwP6kcAvD_D-w5nbGrOKXW4uZ_gbgIX_AeA&amp;oe=6AED0966"/>
+                                    </div>
+                                    <div class="org-card-body">
+                                        <div class="org-card-top"><span class="org-cluster-tag">Culture, Arts, and Multimedia Cluster</span>
+                                        </div>
+                                        <h4>TAZ
+                                        </h4>
+                                        <p>Teatro Ateneo de Zamboanga, a student theater and performing arts group.
+                                        </p>
+                                        <a class="org-facebook-link" href="https://www.facebook.com/AdZUTeatro?mibextid=wwXIfr&amp;rdid=Pziek6bFUqS6UZoI&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1EdzzyH8mk%2F#" rel="noopener noreferrer" target="_blank">Visit Facebook page ↗</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                    <p class="org-empty" hidden="" id="orgEmpty">No organizations match your search. Try another name or cluster.
+                    </p>
+                </div>
+            </section>
+            <!-- Contact page section -->
+            <section class="contact-section section-pad page-view"  data-page="contact" id="contact">
+                <div class="wrap contact-layout">
+                    <div class="contact-intro"><span class="eyebrow">NEED OFFICIAL ASSISTANCE?</span>
+                        <h2>Contact the<br/><em>Institution.</em>
+                        </h2>
+                        <p>For official inquiries, contact Ateneo de Zamboanga University through the details below.
+                        </p>
+                        <a class="btn btn-primary" href="https://www.adzu.edu.ph/" rel="noopener noreferrer" target="_blank">Visit AdZU website ↗</a>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Ateneo de Zamboanga University
+                        </h3>
+                        <div class="contact-item"><span aria-hidden="true" class="contact-symbol">⌖</span>
+                            <p>La Purisima Street,<br/>Zamboanga City 7000 Philippines
+                            </p>
+                        </div>
+                        <div class="contact-item"><span aria-hidden="true" class="contact-symbol">☎</span>
+                            <p><strong>Telephone</strong><br/><a href="tel:+63629910871">(63)(62) 991-0871 to 76</a>
+                            </p>
+                        </div>
+                        <div class="contact-item"><span aria-hidden="true" class="contact-symbol">▤</span>
+                            <p><strong>Fax</strong><br/><a href="tel:+63629910870">(63)(62) 991-0870</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Admin page section -->
+            <section class="admin-section section-pad page-view"  data-page="admin" id="admin">
+                <div class="wrap admin-layout">
+                    <div><span class="eyebrow">CONTENT MANAGEMENT DEMO</span>
+                        <h2>Admin directory
+                        </h2>
+                        <p>Add a campus directory item for this browser demo. Items are saved locally in this browser only; this is not a secure, multi-user admin system.
+                        </p>
+                    </div>
+                    <form class="admin-form" id="adminForm">
+                        <label>Place or service name<input id="newPlaceName" maxlength="70" placeholder="e.g. Computer Laboratory" required=""/></label>
+                        <label>Category<select id="newPlaceCategory"><option value="office">Office</option><option value="study">Study spot</option><option value="facility">Facility</option></select></label>
+                        <label>Short description<textarea id="newPlaceDescription" maxlength="180" placeholder="Add a brief description..." required="" rows="3"></textarea></label>
+                        <button class="btn btn-primary" type="submit">Add directory item +</button>
+                        <p class="form-message" id="adminMessage" role="status">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- Shared footer and official social links -->
+        <footer class="site-footer">
+            <div class="wrap footer-inner"><a class="brand footer-brand" href="#home"><span><strong>ADZU BUDDY</strong><small>Your guide to college life</small></span></a>
+                <div class="footer-links"><a href="#home" data-page-link="home">Back to home ↑</a><a href="https://www.adzu.edu.ph/" rel="noopener noreferrer" target="_blank">Official AdZU website ↗</a>
+                </div>
+            </div>
+            <div class="wrap social-area">
+                <h3>Follow AdZU on social media
+                </h3>
+                <div aria-label="Official AdZU social media links" class="social-links">
+                    <a aria-label="AdZU on Facebook" href="https://www.facebook.com/ateneodezamboangauniversity" rel="noopener noreferrer" target="_blank" title="Facebook"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.3-1.5 1.6-1.5h1.7V3.7c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5v1.8H7v3.1h2.8v8z"></path></svg></a>
+                    <a aria-label="AdZU on X" href="https://x.com/AdZUOfficial" rel="noopener noreferrer" target="_blank" title="Twitter / X"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 13.9 4.9 22H1.8l7.3-8.4L1.3 2h6.5l4.5 7.5zm-1.1 18h1.7L6.8 3.9H5z"></path></svg></a>
+                    <a aria-label="AdZU on Instagram" href="https://www.instagram.com/adzuofficial/" rel="noopener noreferrer" target="_blank" title="Instagram"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6m5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4"></path></svg></a>
+                    <a aria-label="AdZU on YouTube" href="https://www.youtube.com/@ateneodezamboangauniversity" rel="noopener noreferrer" target="_blank" title="YouTube"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8M9.6 15.6V8.4l6.2 3.6z"></path></svg></a>
+                    <a aria-label="AdZU on TikTok" href="https://www.tiktok.com/@adzuofficial" rel="noopener noreferrer" target="_blank" title="TikTok"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M19.6 6.2a5.8 5.8 0 0 1-3.5-1.2A5.8 5.8 0 0 1 14.2 2h-3.7v13.6a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .9.1V9.1a7 7 0 1 0 5.6 6.9V9.1a9.5 9.5 0 0 0 5.4 1.7z"></path></svg></a>
+                </div>
+            </div>
+            <div class="wrap footer-bottom"><span></span><span></span>
+            </div>
+        </footer>
+        <!-- Reusable student-guide dialog -->
+        <dialog class="guide-dialog" id="guideDialog"><button aria-label="Close" class="dialog-close" id="closeDialog">×</button>
+            <div class="dialog-content"><span class="eyebrow">STUDENT GUIDE</span>
+                <h2 id="dialogTitle">Guide
+                </h2>
+                <div id="dialogContent">
+                </div>
+                <p class="demo-notice" id="dialogNote">
+                </p>
+                <button class="btn btn-primary" id="dialogDone">Got it</button>
+            </div>
+        </dialog>
+    </body>
+</html>
